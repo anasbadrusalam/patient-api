@@ -83,7 +83,7 @@ endpoints:
         name: id_type
         description: ''
         required: true
-        example: mypr
+        example: mytentera
         type: string
         enumValues:
           - mykad
@@ -112,7 +112,7 @@ endpoints:
         name: gender
         description: ''
         required: true
-        example: male
+        example: female
         type: string
         enumValues:
           - male
@@ -144,7 +144,7 @@ endpoints:
         name: medium_acquisition
         description: ''
         required: true
-        example: other
+        example: social_media
         type: string
         enumValues:
           - walk_in
@@ -161,12 +161,12 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: b
-      id_type: mypr
+      id_type: mytentera
       id_no: 'n'
-      gender: male
+      gender: female
       dob: '2021-06-04'
       address: architecto
-      medium_acquisition: other
+      medium_acquisition: social_media
     fileParameters: []
     responses: []
     responseFields: []
@@ -281,7 +281,7 @@ endpoints:
         name: id_type
         description: ''
         required: true
-        example: passport
+        example: mykid
         type: string
         enumValues:
           - mykad
@@ -342,7 +342,7 @@ endpoints:
         name: medium_acquisition
         description: ''
         required: true
-        example: walk_in
+        example: other
         type: string
         enumValues:
           - walk_in
@@ -359,12 +359,12 @@ endpoints:
         custom: []
     cleanBodyParameters:
       name: b
-      id_type: passport
+      id_type: mykid
       id_no: 'n'
       gender: female
       dob: '2021-06-04'
       address: architecto
-      medium_acquisition: walk_in
+      medium_acquisition: other
     fileParameters: []
     responses: []
     responseFields: []

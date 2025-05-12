@@ -25,12 +25,6 @@
                     body .content .javascript-example code { display: none; }
             </style>
 
-    <script>
-        var tryItOutBaseUrl = "https://physio.file.web.id";
-        var useCsrf = Boolean();
-        var csrfUrl = "/sanctum/csrf-cookie";
-    </script>
-    <script src="{{ asset("/vendor/scribe/js/tryitout-5.2.1.js") }}"></script>
 
     <script src="{{ asset("/vendor/scribe/js/theme-default-5.2.1.js") }}"></script>
 
@@ -91,9 +85,7 @@
             </div>
 
     <ul class="toc-footer" id="toc-footer">
-                    <li style="padding-bottom: 5px;"><a href="{{ route("scribe.postman") }}">View Postman collection</a></li>
-                            <li style="padding-bottom: 5px;"><a href="{{ route("scribe.openapi") }}">View OpenAPI spec</a></li>
-                <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+                        <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
     </ul>
 
     <ul class="toc-footer" id="last-updated">
@@ -233,23 +225,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
       onsubmit="event.preventDefault(); executeTryOut('GETapi-patients', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-patients"
-                    onclick="tryItOut('GETapi-patients');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-patients"
-                    onclick="cancelTryOut('GETapi-patients');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-patients"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -311,12 +286,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"name\": \"b\",
-    \"id_type\": \"mypr\",
+    \"id_type\": \"mytentera\",
     \"id_no\": \"n\",
-    \"gender\": \"male\",
+    \"gender\": \"female\",
     \"dob\": \"2021-06-04\",
     \"address\": \"architecto\",
-    \"medium_acquisition\": \"other\"
+    \"medium_acquisition\": \"social_media\"
 }"
 </code></pre></div>
 
@@ -334,12 +309,12 @@ const headers = {
 
 let body = {
     "name": "b",
-    "id_type": "mypr",
+    "id_type": "mytentera",
     "id_no": "n",
-    "gender": "male",
+    "gender": "female",
     "dob": "2021-06-04",
     "address": "architecto",
-    "medium_acquisition": "other"
+    "medium_acquisition": "social_media"
 };
 
 fetch(url, {
@@ -376,23 +351,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-patients', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-patients"
-                    onclick="tryItOut('POSTapi-patients');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-patients"
-                    onclick="cancelTryOut('POSTapi-patients');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-patients"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-black">POST</small>
@@ -450,10 +408,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id_type"                data-endpoint="POSTapi-patients"
-               value="mypr"
+               value="mytentera"
                data-component="body">
     <br>
-<p>Example: <code>mypr</code></p>
+<p>Example: <code>mytentera</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>mykad</code></li> <li><code>passport</code></li> <li><code>mypr</code></li> <li><code>mykid</code></li> <li><code>mytentera</code></li> <li><code>police_id</code></li> <li><code>imm13</code></li> <li><code>foreign_id</code></li> <li><code>other</code></li></ul>
         </div>
@@ -474,10 +432,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="gender"                data-endpoint="POSTapi-patients"
-               value="male"
+               value="female"
                data-component="body">
     <br>
-<p>Example: <code>male</code></p>
+<p>Example: <code>female</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>male</code></li> <li><code>female</code></li></ul>
         </div>
@@ -509,10 +467,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="medium_acquisition"                data-endpoint="POSTapi-patients"
-               value="other"
+               value="social_media"
                data-component="body">
     <br>
-<p>Example: <code>other</code></p>
+<p>Example: <code>social_media</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>walk_in</code></li> <li><code>referral_doctor</code></li> <li><code>referral_patient</code></li> <li><code>social_media</code></li> <li><code>website</code></li> <li><code>online_ads</code></li> <li><code>insurance</code></li> <li><code>hospital_partner</code></li> <li><code>other</code></li></ul>
         </div>
@@ -613,23 +571,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
       onsubmit="event.preventDefault(); executeTryOut('GETapi-patients--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-patients--id-"
-                    onclick="tryItOut('GETapi-patients--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-patients--id-"
-                    onclick="cancelTryOut('GETapi-patients--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-patients--id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
@@ -703,12 +644,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"name\": \"b\",
-    \"id_type\": \"passport\",
+    \"id_type\": \"mykid\",
     \"id_no\": \"n\",
     \"gender\": \"female\",
     \"dob\": \"2021-06-04\",
     \"address\": \"architecto\",
-    \"medium_acquisition\": \"walk_in\"
+    \"medium_acquisition\": \"other\"
 }"
 </code></pre></div>
 
@@ -726,12 +667,12 @@ const headers = {
 
 let body = {
     "name": "b",
-    "id_type": "passport",
+    "id_type": "mykid",
     "id_no": "n",
     "gender": "female",
     "dob": "2021-06-04",
     "address": "architecto",
-    "medium_acquisition": "walk_in"
+    "medium_acquisition": "other"
 };
 
 fetch(url, {
@@ -768,23 +709,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-patients--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-patients--id-"
-                    onclick="tryItOut('PUTapi-patients--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-patients--id-"
-                    onclick="cancelTryOut('PUTapi-patients--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-patients--id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-darkblue">PUT</small>
@@ -858,10 +782,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id_type"                data-endpoint="PUTapi-patients--id-"
-               value="passport"
+               value="mykid"
                data-component="body">
     <br>
-<p>Example: <code>passport</code></p>
+<p>Example: <code>mykid</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>mykad</code></li> <li><code>passport</code></li> <li><code>mypr</code></li> <li><code>mykid</code></li> <li><code>mytentera</code></li> <li><code>police_id</code></li> <li><code>imm13</code></li> <li><code>foreign_id</code></li> <li><code>other</code></li></ul>
         </div>
@@ -917,10 +841,10 @@ Must be one of:
  &nbsp;
                 <input type="text" style="display: none"
                               name="medium_acquisition"                data-endpoint="PUTapi-patients--id-"
-               value="walk_in"
+               value="other"
                data-component="body">
     <br>
-<p>Example: <code>walk_in</code></p>
+<p>Example: <code>other</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>walk_in</code></li> <li><code>referral_doctor</code></li> <li><code>referral_patient</code></li> <li><code>social_media</code></li> <li><code>website</code></li> <li><code>online_ads</code></li> <li><code>insurance</code></li> <li><code>hospital_partner</code></li> <li><code>other</code></li></ul>
         </div>
@@ -990,23 +914,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-patients--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-patients--id-"
-                    onclick="tryItOut('DELETEapi-patients--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-patients--id-"
-                    onclick="cancelTryOut('DELETEapi-patients--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-patients--id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
             </h3>
             <p>
             <small class="badge badge-red">DELETE</small>
